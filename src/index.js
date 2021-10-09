@@ -1,6 +1,6 @@
-import test from './initial-page-load.js'
+import initialLoad from './initial-page-load.js'
 
-console.log('Hello World!')
+console.log('Hello Beautiful People!')
 
-test()
+initialLoad()
 
