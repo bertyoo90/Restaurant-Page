@@ -15,7 +15,9 @@ export function initialLoad() {
     let containerContent = document.createElement('div')
     let chefPic = document.createElement('img')
     let description = document.createElement('p')
-
+    let welcome = document.createElement('p')
+    let comeSoon = document.createElement('p')
+    
     //Content under footer
     let footerContent = document.createElement('footer')
     let author = document.createElement('p')
@@ -33,9 +35,12 @@ export function initialLoad() {
     navigation.appendChild(aboutHeader)
 
     //container --> appending container child content
+    chefPic.src = './image/Chef_Roy_Choi.jpeg'
     containerContent.appendChild(description)
+    containerContent.appendChild(welcome)
     containerContent.appendChild(chefPic)
-
+    containerContent.appendChild(comeSoon)
+    
     //footer --> appending footer child content
     footerContent.appendChild(author)
 
@@ -46,20 +51,22 @@ export function initialLoad() {
     containerContent.setAttribute('id', 'container')
     restaurantName.setAttribute('id', 'english-title')
     description.setAttribute('id', 'description')
+    welcome.setAttribute('id', 'welcome')
+    comeSoon.setAttribute('id', 'come-soon')
     chefPic.setAttribute('id', 'chef-pic')
     author.setAttribute('id', 'author')
+
 
     //Home elements
     homeHeader.textContent = 'Home'
     menuHeader.textContent = 'Menu'
     aboutHeader.textContent = 'About'
 
-
     //Container elements
     restaurantName.textContent = 'Gatji Meokja!'
-    description.textContent = 'Come enjoy some authentic Korean Cuisine!'
-    menuButton.textContent = 'Menu'
-    chefPic.src = 'image/Chef_Roy_Choi.jpeg'
+    description.textContent = 'Gatji Meokja means lets eat together!'
+    welcome.textContent = 'Come enjoy some authentic Korean Cuisine with us!'
+    comeSoon.textContent = 'We hope to see you soon!'
 
     //Footer elements
     author.textContent = 'Developed by Albert Yoo'
@@ -73,8 +80,7 @@ export function initialLoad() {
         containerContent,
         restaurantName,
         description,
-        foodPic,
-        menuButton
+        chefPic,
     }
 
 }

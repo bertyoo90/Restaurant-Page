@@ -1,7 +1,12 @@
 import { initialLoad } from './initial-page-load.js'
 
-console.log('Hello Beautiful People!')
-
 initialLoad()
+
+let home = document.querySelector('#home')
+
+home.addEventListener('click', function(){
+    initialLoad()
+})
+
 
 
