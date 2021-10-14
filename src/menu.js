@@ -43,41 +43,44 @@ export function menuPage() {
 
 
     // menu --> appending menu items to container
-    menuContainer.appendChild(gopchang)
-    menuContainer.appendChild(samgyupsal)
-    menuContainer.appendChild(chadolbaegi)
-    menuContainer.appendChild(bulgogi)
+    // menuContainer.appendChild(gopchang)
+    // menuContainer.appendChild(samgyupsal)
+    // menuContainer.appendChild(chadolbaegi)
+    // menuContainer.appendChild(bulgogi)
 
     
     // menu item names
-    gopchang.textContent = 'Gopchang'
-    samgyupsal.textContent = 'Samgyupsal'
-    chadolbaegi.textContent = 'Chadolbaegi'
-    bulgogi.textContent = 'Bulgogi'
+    // gopchang.textContent = 'Gopchang'
+    // samgyupsal.textContent = 'Samgyupsal'
+    // chadolbaegi.textContent = 'Chadolbaegi'
+    // bulgogi.textContent = 'Bulgogi'
 
 
     //description --> appending item descriptions to menu items
-    gopchang.appendChild(gopDescription)
-    samgyupsal.appendChild(samDescription)
-    chadolbaegi.appendChild(chadolDescription)
-    bulgogi.appendChild(bulDescription)
+    // gopchang.appendChild(gopDescription)
+    // samgyupsal.appendChild(samDescription)
+    // chadolbaegi.appendChild(chadolDescription)
+    // bulgogi.appendChild(bulDescription)
 
 
     //Menu item descriptions
-    gopDescription.textContent = 'Small beef or pork intestine'
-    samDescription.textContent = 'Thick cut pieces of pork belly'
-    chadolDescription.textContent = 'Thinly sliced pieces of beef brisket'
-    bulDescription.textContent = 'Marinated slices of beef or pork cooked on a hot griddle'
+    // gopDescription.textContent = 'Small beef or pork intestine'
+    // samDescription.textContent = 'Thick cut pieces of pork belly'
+    // chadolDescription.textContent = 'Thinly sliced pieces of beef brisket'
+    // bulDescription.textContent = 'Marinated slices of beef or pork cooked on a hot griddle'
 
 
     //Placing pictures underneath the description
-    gopPic.appendChild(gopDescription)
-    samPic.appendChild(samDescription)
-    chadolPic.appendChild(chadolDescription)
-    bulPic.appendChild(bulDescription)
     gopPic.src = './image/gopchang.jpg'
     samPic.src = './image/samgyupsal.jpg'
     chadolPic.src = './image/chadolbaegi.jpg'
     bulPic.src = './image/bulgogi.jpg'
+    menuContainer.appendChild(gopPic)
+    menuContainer.appendChild(samPic)
+    menuContainer.appendChild(chadolPic)
+    menuContainer.appendChild(bulPic)
+
+    
+   
 
 }
