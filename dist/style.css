@@ -43,6 +43,22 @@ nav {
 .container-menu {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    height: 400px;
+}
+
+#gopchang, #samgyupsal, #chadolbaegi, #bulgogi {
+    color: green;
+    margin-top: 15px;
+}
+
+#chadolbaegi, #bulgogi {
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+
+#g-des, #s-des, #c-des, #b-des {
+    color: white;
+    margin-top: 5px;
 }
 
 #container, #header {
