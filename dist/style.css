@@ -38,12 +38,21 @@ nav {
     color: #fff;
     text-align: center;
     padding-bottom: 50px;
+    border-radius: 30px;
+
 }
 
 .container-menu {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 400px;
+    height: 50%;
+    border-radius: 30px;
+}
+
+.container-menu img {
+    padding-top: 20px;
+    max-width: 70%;
+    border-radius: 30px;
 }
 
 #gopchang, #samgyupsal, #chadolbaegi, #bulgogi {
@@ -65,11 +74,12 @@ nav {
     border: 1px solid #323633;
 }
 
-img {
+#chef-pic {
     padding-top: 20px;
     width: 50%;
     /* height: 0%; */
-    border-radius: 50px;
+    border-radius: 30px;
+    opacity: 0.8;
 }
 
 #description {

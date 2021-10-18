@@ -10,7 +10,6 @@ export function initialLoad() {
     let menuHeader = document.createElement('button')
     let aboutHeader = document.createElement('button')
 
-
     //Content under container div
     let containerContent = document.createElement('div')
     let chefPic = document.createElement('img')

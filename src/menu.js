@@ -1,5 +1,6 @@
 
 export function menuPage() {
+
     let menuContainer = document.querySelector('#container')
     menuContainer.textContent = ''
     menuContainer.classList.add('container-menu')
@@ -22,6 +23,41 @@ export function menuPage() {
     let chadolPic = document.createElement('img')
     let bulPic = document.createElement('img')
 
+    // menu --> appending menu items to container
+    menuContainer.appendChild(gopchang)
+    menuContainer.appendChild(samgyupsal)
+    menuContainer.appendChild(chadolbaegi)
+    menuContainer.appendChild(bulgogi)
+
+    // menu item names
+    gopchang.textContent = 'Gopchang'
+    samgyupsal.textContent = 'Samgyupsal'
+    chadolbaegi.textContent = 'Chadolbaegi'
+    bulgogi.textContent = 'Bulgogi'
+
+    //description --> appending item descriptions to menu items
+    gopchang.appendChild(gopDescription)
+    samgyupsal.appendChild(samDescription)
+    chadolbaegi.appendChild(chadolDescription)
+    bulgogi.appendChild(bulDescription)
+
+    //Menu item descriptions
+    gopDescription.textContent = 'Small beef or pork intestine'
+    samDescription.textContent = 'Thick cut pieces of pork belly'
+    chadolDescription.textContent = 'Thinly sliced pieces of beef brisket'
+    bulDescription.textContent = 'Marinated slices of beef or pork cooked on a hot griddle'
+
+
+    // Placing pictures underneath the description
+    gopDescription.appendChild(gopPic)
+    samDescription.appendChild(samPic)
+    chadolDescription.appendChild(chadolPic)
+    bulDescription.appendChild(bulPic)
+    gopPic.src = './image/gopchang.jpg'
+    samPic.src = './image/samgyupsal.jpg'
+    chadolPic.src = './image/chadolbaegi.jpg'
+    bulPic.src = './image/bulgogi.jpg'
+
     //Setting menu IDs
     gopchang.setAttribute('id', 'gopchang')
     samgyupsal.setAttribute('id', 'samgyupsal')
@@ -39,46 +75,11 @@ export function menuPage() {
     samPic.setAttribute('id', 'sam-pic')
     chadolPic.setAttribute('id', 'chadol-pic')
     bulPic.setAttribute('id', 'bul-pic')
-  
 
 
-    // menu --> appending menu items to container
-    // menuContainer.appendChild(gopchang)
-    // menuContainer.appendChild(samgyupsal)
-    // menuContainer.appendChild(chadolbaegi)
-    // menuContainer.appendChild(bulgogi)
-
-    
-    // menu item names
-    // gopchang.textContent = 'Gopchang'
-    // samgyupsal.textContent = 'Samgyupsal'
-    // chadolbaegi.textContent = 'Chadolbaegi'
-    // bulgogi.textContent = 'Bulgogi'
 
 
-    //description --> appending item descriptions to menu items
-    // gopchang.appendChild(gopDescription)
-    // samgyupsal.appendChild(samDescription)
-    // chadolbaegi.appendChild(chadolDescription)
-    // bulgogi.appendChild(bulDescription)
-
-
-    //Menu item descriptions
-    // gopDescription.textContent = 'Small beef or pork intestine'
-    // samDescription.textContent = 'Thick cut pieces of pork belly'
-    // chadolDescription.textContent = 'Thinly sliced pieces of beef brisket'
-    // bulDescription.textContent = 'Marinated slices of beef or pork cooked on a hot griddle'
-
-
-    //Placing pictures underneath the description
-    gopPic.src = './image/gopchang.jpg'
-    samPic.src = './image/samgyupsal.jpg'
-    chadolPic.src = './image/chadolbaegi.jpg'
-    bulPic.src = './image/bulgogi.jpg'
-    menuContainer.appendChild(gopPic)
-    menuContainer.appendChild(samPic)
-    menuContainer.appendChild(chadolPic)
-    menuContainer.appendChild(bulPic)
+   
 
     
    
