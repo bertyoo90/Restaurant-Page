@@ -11,15 +11,15 @@ let menu = document.querySelector('#menu')
 // const container = document.querySelector('.container-menu')
 // const footer = document.querySelector('footer')
 
-// function removeChildren() {
-//     let parent = document.querySelector('#content')
+function removeChildren() {
+    let parent = document.querySelector('#content')
 
-//     let child = parent.lastElementChild;
-//     while (child) {
-//     parent.removeChild(child)
-//     child = parent.lastElementChild
-//     }
-// }
+    let child = parent.lastElementChild;
+    while (child) {
+    parent.removeChild(child)
+    child = parent.lastElementChild
+    }
+}
 
 
 home.addEventListener('click', function(){

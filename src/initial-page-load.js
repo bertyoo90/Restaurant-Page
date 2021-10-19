@@ -3,83 +3,91 @@ export function initialLoad() {
     let content = document.querySelector('#content')
 
     //Content under header
-    let navigation = document.createElement('nav')
-    let restaurantName = document.createElement('h2')  
-    let pageHeader = document.createElement('header')
-    let homeHeader = document.createElement('button')
-    let menuHeader = document.createElement('button')
-    let aboutHeader = document.createElement('button')
+    let header = {
+        navigation: document.createElement('nav'),
+        restaurantName: document.createElement('h2'),  
+        pageHeader: document.createElement('header'),
+        homeHeader: document.createElement('button'),
+        menuHeader: document.createElement('button'),
+        aboutHeader: document.createElement('button')
+    }
 
     //Content under container div
-    let containerContent = document.createElement('div')
-    let chefPic = document.createElement('img')
-    let description = document.createElement('p')
-    let welcome = document.createElement('p')
-    let comeSoon = document.createElement('p')
+    let container = {
+        containerContent: document.createElement('div'),
+        chefPic: document.createElement('img'),
+        description: document.createElement('p'),
+        welcome: document.createElement('p'),
+        comeSoon: document.createElement('p')
+    }
+    // let containerContent = document.createElement('div')
+    // let chefPic = document.createElement('img')
+    // let description = document.createElement('p')
+    // let welcome = document.createElement('p')
+    // let comeSoon = document.createElement('p')
     
     //Content under footer
-    let footerContent = document.createElement('footer')
-    let author = document.createElement('p')
+    const footer = {
+        footerContent: document.createElement('footer'),
+        author: document.createElement('p')
+    }
+
     
     //#content --> appending child elements
-    content.appendChild(pageHeader)
-    content.appendChild(containerContent)
-    content.appendChild(footerContent)
+    content.appendChild(header.pageHeader)
+    content.appendChild(container.containerContent)
+    content.appendChild(footer.footerContent)
 
     //header --> appending child header/nav elements
-    pageHeader.appendChild(restaurantName)
-    pageHeader.appendChild(navigation)
-    navigation.appendChild(homeHeader)
-    navigation.appendChild(menuHeader)
-    navigation.appendChild(aboutHeader)
+    header.pageHeader.appendChild(header.restaurantName)
+    header.pageHeader.appendChild(header.navigation)
+    header.navigation.appendChild(header.homeHeader)
+    header.navigation.appendChild(header.menuHeader)
+    header.navigation.appendChild(header.aboutHeader)
 
     //container --> appending container child content
-    chefPic.src = './image/Chef_Roy_Choi.jpeg'
-    containerContent.appendChild(description)
-    containerContent.appendChild(welcome)
-    containerContent.appendChild(chefPic)
-    containerContent.appendChild(comeSoon)
+    container.chefPic.src = './image/Chef_Roy_Choi.jpeg'
+    container.containerContent.appendChild(container.description)
+    container.containerContent.appendChild(container.welcome)
+    container.containerContent.appendChild(container.chefPic)
+    container.containerContent.appendChild(container.comeSoon)
     
     //footer --> appending footer child content
-    footerContent.appendChild(author)
+    footer.footerContent.appendChild(footer.author)
 
     //content #id's
-    homeHeader.setAttribute('id', 'home')
-    menuHeader.setAttribute('id', 'menu')
-    aboutHeader.setAttribute('id', 'about')
-    containerContent.setAttribute('id', 'container')
-    restaurantName.setAttribute('id', 'english-title')
-    description.setAttribute('id', 'description')
-    welcome.setAttribute('id', 'welcome')
-    comeSoon.setAttribute('id', 'come-soon')
-    chefPic.setAttribute('id', 'chef-pic')
-    author.setAttribute('id', 'author')
+    header.homeHeader.setAttribute('id', 'home')
+    header.menuHeader.setAttribute('id', 'menu')
+    header.aboutHeader.setAttribute('id', 'about')
+    container.containerContent.setAttribute('id', 'container')
+    header.restaurantName.setAttribute('id', 'english-title')
+    container.description.setAttribute('id', 'description')
+    container.welcome.setAttribute('id', 'welcome')
+    container.comeSoon.setAttribute('id', 'come-soon')
+    container.chefPic.setAttribute('id', 'chef-pic')
+    footer.author.setAttribute('id', 'author')
 
 
     //Home elements
-    homeHeader.textContent = 'Home'
-    menuHeader.textContent = 'Menu'
-    aboutHeader.textContent = 'About'
+    header.homeHeader.textContent = 'Home'
+    header.menuHeader.textContent = 'Menu'
+    header.aboutHeader.textContent = 'About'
 
     //Container elements
-    restaurantName.textContent = 'Gatji Meokja!'
-    description.textContent = 'Gatji Meokja means lets eat together!'
-    welcome.textContent = 'Come enjoy some authentic Korean Cuisine with us!'
-    comeSoon.textContent = 'We hope to see you soon!'
+    header.restaurantName.textContent = 'Gatji Meokja!'
+    container.description.textContent = 'Gatji Meokja means lets eat together!'
+    container.welcome.textContent = 'Come enjoy some authentic Korean Cuisine with us!'
+    container.comeSoon.textContent = 'We hope to see you soon!'
 
     //Footer elements
-    author.textContent = 'Developed by Albert Yoo'
+    footer.author.textContent = 'Developed by Albert Yoo'
 
 
     return {
         content,
-        pageHeader,
-        homeHeader,
-        aboutHeader,
-        containerContent,
-        restaurantName,
-        description,
-        chefPic,
+        header,
+        container,
+        footer
     }
 
 }

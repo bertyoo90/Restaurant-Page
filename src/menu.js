@@ -1,80 +1,104 @@
-
 export function menuPage() {
 
+    function removeContainer() {
+        let parent = document.querySelector('#container')
+    
+        let child = parent.lastElementChild;
+        while (child) {
+        parent.removeChild(child)
+        child = parent.lastElementChild
+        }
+    }
+
+    removeContainer()
+
+    let pageContent = document.querySelector('#content')
     let menuContainer = document.querySelector('#container')
-    menuContainer.textContent = ''
     menuContainer.classList.add('container-menu')
 
+
     //menu items
-    let gopchang = document.createElement('div')
-    let samgyupsal = document.createElement('div')
-    let chadolbaegi = document.createElement('div')
-    let bulgogi = document.createElement('div')
+    const menuItems = {
+        gopchang: document.createElement('div'),
+        samgyupsal: document.createElement('div'),
+        chadolbaegi: document.createElement('div'),
+        bulgogi: document.createElement('div')
+    }
+    
 
     //item descriptions
-    let gopDescription = document.createElement('p')
-    let samDescription = document.createElement('p')
-    let chadolDescription = document.createElement('p')
-    let bulDescription = document.createElement('p')
+    const itemDescriptions = {
+        gopDescription: document.createElement('p'),
+        samDescription: document.createElement('p'),
+        chadolDescription: document.createElement('p'),
+        bulDescription: document.createElement('p')
+    }
+    
 
     //item pictures
-    let gopPic = document.createElement('img')
-    let samPic = document.createElement('img')
-    let chadolPic = document.createElement('img')
-    let bulPic = document.createElement('img')
+    const itemPics = {
+        gopPic: document.createElement('img'),
+        samPic: document.createElement('img'),
+        chadolPic: document.createElement('img'),
+        bulPic: document.createElement('img')
+    }
+    
 
     // menu --> appending menu items to container
-    menuContainer.appendChild(gopchang)
-    menuContainer.appendChild(samgyupsal)
-    menuContainer.appendChild(chadolbaegi)
-    menuContainer.appendChild(bulgogi)
+    menuContainer.appendChild(menuItems.gopchang)
+    menuContainer.appendChild(menuItems.samgyupsal)
+    menuContainer.appendChild(menuItems.chadolbaegi)
+    menuContainer.appendChild(menuItems.bulgogi)
 
     // menu item names
-    gopchang.textContent = 'Gopchang'
-    samgyupsal.textContent = 'Samgyupsal'
-    chadolbaegi.textContent = 'Chadolbaegi'
-    bulgogi.textContent = 'Bulgogi'
+    menuItems.gopchang.textContent = 'Gopchang'
+    menuItems.samgyupsal.textContent = 'Samgyupsal'
+    menuItems.chadolbaegi.textContent = 'Chadolbaegi'
+    menuItems.bulgogi.textContent = 'Bulgogi'
 
     //description --> appending item descriptions to menu items
-    gopchang.appendChild(gopDescription)
-    samgyupsal.appendChild(samDescription)
-    chadolbaegi.appendChild(chadolDescription)
-    bulgogi.appendChild(bulDescription)
+    menuItems.gopchang.appendChild(itemDescriptions.gopDescription)
+    menuItems.samgyupsal.appendChild(itemDescriptions.samDescription)
+    menuItems.chadolbaegi.appendChild(itemDescriptions.chadolDescription)
+    menuItems.bulgogi.appendChild(itemDescriptions.bulDescription)
 
     //Menu item descriptions
-    gopDescription.textContent = 'Small beef or pork intestine'
-    samDescription.textContent = 'Thick cut pieces of pork belly'
-    chadolDescription.textContent = 'Thinly sliced pieces of beef brisket'
-    bulDescription.textContent = 'Marinated slices of beef or pork cooked on a hot griddle'
+    itemDescriptions.gopDescription.textContent = 'Small beef or pork intestine'
+    itemDescriptions.samDescription.textContent = 'Thick cut pieces of pork belly'
+    itemDescriptions.chadolDescription.textContent = 'Thinly sliced pieces of beef brisket'
+    itemDescriptions.bulDescription.textContent = 'Marinated slices of beef or pork cooked on a hot griddle'
 
 
     // Placing pictures underneath the description
-    gopDescription.appendChild(gopPic)
-    samDescription.appendChild(samPic)
-    chadolDescription.appendChild(chadolPic)
-    bulDescription.appendChild(bulPic)
-    gopPic.src = './image/gopchang.jpg'
-    samPic.src = './image/samgyupsal.jpg'
-    chadolPic.src = './image/chadolbaegi.jpg'
-    bulPic.src = './image/bulgogi.jpg'
+    itemDescriptions.gopDescription.appendChild(itemPics.gopPic)
+    itemDescriptions.samDescription.appendChild(itemPics.samPic)
+    itemDescriptions.chadolDescription.appendChild(itemPics.chadolPic)
+    itemDescriptions.bulDescription.appendChild(itemPics.bulPic)
+    itemPics.gopPic.src = './image/gopchang.jpg'
+    itemPics.samPic.src = './image/samgyupsal.jpg'
+    itemPics.chadolPic.src = './image/chadolbaegi.jpg'
+    itemPics.bulPic.src = './image/bulgogi.jpg'
+
+    //Setting container ID
+    menuContainer.setAttribute('id', 'container')
 
     //Setting menu IDs
-    gopchang.setAttribute('id', 'gopchang')
-    samgyupsal.setAttribute('id', 'samgyupsal')
-    chadolbaegi.setAttribute('id', 'chadolbaegi')
-    bulgogi.setAttribute('id', 'bulgogi')
+    menuItems.gopchang.setAttribute('id', 'gopchang')
+    menuItems.samgyupsal.setAttribute('id', 'samgyupsal')
+    menuItems.chadolbaegi.setAttribute('id', 'chadolbaegi')
+    menuItems.bulgogi.setAttribute('id', 'bulgogi')
 
     //Setting description id's
-    gopDescription.setAttribute('id', 'g-des')
-    samDescription.setAttribute('id', 's-des')
-    chadolDescription.setAttribute('id', 'c-des')
-    bulDescription.setAttribute('id', 'b-des')
+    itemDescriptions.gopDescription.setAttribute('id', 'g-des')
+    itemDescriptions.samDescription.setAttribute('id', 's-des')
+    itemDescriptions.chadolDescription.setAttribute('id', 'c-des')
+    itemDescriptions.bulDescription.setAttribute('id', 'b-des')
 
     //Setting picture id's
-    gopPic.setAttribute('id', 'gop-pic')
-    samPic.setAttribute('id', 'sam-pic')
-    chadolPic.setAttribute('id', 'chadol-pic')
-    bulPic.setAttribute('id', 'bul-pic')
+    itemPics.gopPic.setAttribute('id', 'gop-pic')
+    itemPics.samPic.setAttribute('id', 'sam-pic')
+    itemPics.chadolPic.setAttribute('id', 'chadol-pic')
+    itemPics.bulPic.setAttribute('id', 'bul-pic')
 
 
 
