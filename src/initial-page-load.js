@@ -3,7 +3,7 @@ export function initialLoad() {
     let content = document.querySelector('#content')
 
     //Content under header
-    let header = {
+    const header = {
         navigation: document.createElement('nav'),
         restaurantName: document.createElement('h2'),  
         pageHeader: document.createElement('header'),
@@ -13,8 +13,9 @@ export function initialLoad() {
     }
 
     //Content under container div
-    let container = {
+    const container = {
         containerContent: document.createElement('div'),
+        containerWrapper: document.createElement('div'),
         chefPic: document.createElement('img'),
         description: document.createElement('p'),
         welcome: document.createElement('p'),
@@ -36,6 +37,7 @@ export function initialLoad() {
     //#content --> appending child elements
     content.appendChild(header.pageHeader)
     content.appendChild(container.containerContent)
+    container.containerContent.appendChild(container.containerWrapper)
     content.appendChild(footer.footerContent)
 
     //header --> appending child header/nav elements
@@ -47,10 +49,10 @@ export function initialLoad() {
 
     //container --> appending container child content
     container.chefPic.src = './image/Chef_Roy_Choi.jpeg'
-    container.containerContent.appendChild(container.description)
-    container.containerContent.appendChild(container.welcome)
-    container.containerContent.appendChild(container.chefPic)
-    container.containerContent.appendChild(container.comeSoon)
+    container.containerWrapper.appendChild(container.description)
+    container.containerWrapper.appendChild(container.welcome)
+    container.containerWrapper.appendChild(container.chefPic)
+    container.containerWrapper.appendChild(container.comeSoon)
     
     //footer --> appending footer child content
     footer.footerContent.appendChild(footer.author)
@@ -60,6 +62,7 @@ export function initialLoad() {
     header.menuHeader.setAttribute('id', 'menu')
     header.aboutHeader.setAttribute('id', 'about')
     container.containerContent.setAttribute('id', 'container')
+    container.containerWrapper.setAttribute('id', 'container-wrapper')
     header.restaurantName.setAttribute('id', 'english-title')
     container.description.setAttribute('id', 'description')
     container.welcome.setAttribute('id', 'welcome')

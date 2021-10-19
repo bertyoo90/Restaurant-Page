@@ -10,8 +10,6 @@ export function menuPage() {
         }
     }
 
-    removeContainer()
-
     let pageContent = document.querySelector('#content')
     let menuContainer = document.querySelector('#container')
     menuContainer.classList.add('container-menu')
