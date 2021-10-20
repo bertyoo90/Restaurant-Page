@@ -1,18 +1,7 @@
 export function menuPage() {
-
-    function removeContainer() {
-        let parent = document.querySelector('#container')
-    
-        let child = parent.lastElementChild;
-        while (child) {
-        parent.removeChild(child)
-        child = parent.lastElementChild
-        }
-    }
-
-    let pageContent = document.querySelector('#content')
+    let containerWrapper = document.createElement('div')
     let menuContainer = document.querySelector('#container')
-    menuContainer.classList.add('container-menu')
+    containerWrapper.classList.add('container-menu')
 
 
     //menu items
@@ -41,12 +30,14 @@ export function menuPage() {
         bulPic: document.createElement('img')
     }
     
+    // container --> appending container wrapper to container
+    menuContainer.appendChild(containerWrapper)
 
     // menu --> appending menu items to container
-    menuContainer.appendChild(menuItems.gopchang)
-    menuContainer.appendChild(menuItems.samgyupsal)
-    menuContainer.appendChild(menuItems.chadolbaegi)
-    menuContainer.appendChild(menuItems.bulgogi)
+    containerWrapper.appendChild(menuItems.gopchang)
+    containerWrapper.appendChild(menuItems.samgyupsal)
+    containerWrapper.appendChild(menuItems.chadolbaegi)
+    containerWrapper.appendChild(menuItems.bulgogi)
 
     // menu item names
     menuItems.gopchang.textContent = 'Gopchang'
@@ -77,8 +68,8 @@ export function menuPage() {
     itemPics.chadolPic.src = './image/chadolbaegi.jpg'
     itemPics.bulPic.src = './image/bulgogi.jpg'
 
-    //Setting container ID
-    menuContainer.setAttribute('id', 'container')
+    //Setting containerWrapper ID
+    containerWrapper.setAttribute('id', 'container-wrapper')
 
     //Setting menu IDs
     menuItems.gopchang.setAttribute('id', 'gopchang')

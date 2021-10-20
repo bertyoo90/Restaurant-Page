@@ -60,7 +60,7 @@ export function initialLoad() {
     //content #id's
     header.homeHeader.setAttribute('id', 'home')
     header.menuHeader.setAttribute('id', 'menu')
-    header.aboutHeader.setAttribute('id', 'about')
+    header.aboutHeader.setAttribute('id', 'contact')
     container.containerContent.setAttribute('id', 'container')
     container.containerWrapper.setAttribute('id', 'container-wrapper')
     header.restaurantName.setAttribute('id', 'english-title')
@@ -74,7 +74,7 @@ export function initialLoad() {
     //Home elements
     header.homeHeader.textContent = 'Home'
     header.menuHeader.textContent = 'Menu'
-    header.aboutHeader.textContent = 'About'
+    header.aboutHeader.textContent = 'Contact'
 
     //Container elements
     header.restaurantName.textContent = 'Gatji Meokja!'

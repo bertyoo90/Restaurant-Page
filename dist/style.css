@@ -20,7 +20,7 @@ nav {
     display: flex;
 }
 
-#home, #menu, #about {
+#home, #menu, #contact {
     font-size: 20px;
     margin-right: 15px;
 }
@@ -42,6 +42,14 @@ nav {
 
 }
 
+.container-contact {
+    grid-template-columns: 1fr;
+    display: grid;
+    height: 50%;
+    border-radius: 30px;
+    justify-content: center;
+}
+
 .container-menu {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -53,6 +61,10 @@ nav {
     padding-top: 20px;
     max-width: 70%;
     border-radius: 30px;
+}
+
+#location {
+    width: 70%;
 }
 
 #gopchang, #samgyupsal, #chadolbaegi, #bulgogi {

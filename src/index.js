@@ -1,37 +1,50 @@
 import { initialLoad } from './initial-page-load.js'
 import { menuPage } from './menu.js'
+import { contactPage } from './contact.js'
 
 // initialLoad()
 
 const homeContent = initialLoad()
-console.log(homeContent)
+console.log(homeContent.container)
 
+const pageContent = {
+    home: document.querySelector('#home'),
+    menu: document.querySelector('#menu'),
+    contact: document.querySelector('#contact')
+}
 let container = document.querySelector('#container')
-let home = document.querySelector('#home')
-let menu = document.querySelector('#menu')
+
 
 
 function removeChildren() {
     let parent = document.querySelector('#container')
-    let child = parent.lastElementChild;
-    while (child) {
+    let child = document.querySelector('#container-wrapper')
+    // while (child) {
+    // parent.removeChild(child)
+    // child = parent.lastElementChild
+    // }
     parent.removeChild(child)
-    child = parent.lastElementChild
-    }
 }
 
 
-home.addEventListener('click', function(){
+pageContent.home.addEventListener('click', function(){
     removeChildren()
-    container.append(homeContent)
+    container.append(homeContent.container.containerWrapper)
 
 
 })
 
-menu.addEventListener('click', function() {
+pageContent.menu.addEventListener('click', function() {
     removeChildren()
     menuPage()
 })
+
+pageContent.contact.addEventListener('click', function(){
+    removeChildren()
+    contactPage()
+})
+
+
 
 
 
