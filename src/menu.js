@@ -89,12 +89,4 @@ export function menuPage() {
     itemPics.chadolPic.setAttribute('id', 'chadol-pic')
     itemPics.bulPic.setAttribute('id', 'bul-pic')
 
-
-
-
-   
-
-    
-   
-
 }

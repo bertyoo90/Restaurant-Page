@@ -31,7 +31,6 @@ pageContent.home.addEventListener('click', function(){
     removeChildren()
     container.append(homeContent.container.containerWrapper)
 
-
 })
 
 pageContent.menu.addEventListener('click', function() {

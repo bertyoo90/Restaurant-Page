@@ -19,9 +19,9 @@ export function contactPage() {
     containerWrapper.appendChild(contactPageItems.address)
     containerWrapper.appendChild(contactPageItems.location)
 
-    contactPageItems.phoneNum.textContent = '703-123-4567'
-    contactPageItems.email.textContent = 'fake-address@gmail.com'
-    contactPageItems.address.textContent = '9700 Fairfax Blvd'
+    contactPageItems.phoneNum.textContent = 'Phone: 703-123-4567'
+    contactPageItems.email.textContent = 'Email: gatjimeokja@fakemail.com'
+    contactPageItems.address.textContent = 'Address: 9700 Fairfax Blvd'
     contactPageItems.location.src = './image/location.jpg'
     
     contactPageItems.phoneNum.setAttribute('id', 'phone-num')

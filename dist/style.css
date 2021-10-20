@@ -7,6 +7,7 @@ body {
 }
 
 header {
+    top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,9 +63,26 @@ nav {
     max-width: 70%;
     border-radius: 30px;
 }
+#phone-num {
+    margin-top: 20px;
+}
+
+#email {
+    margin-top: 10px;
+}
+
+/* #address {
+    margin: 10px 0 10px 0; */
+/* } */
+
+#address, #location {
+    margin-top: 50px;
+}
 
 #location {
-    width: 70%;
+    width: 50%;
+    margin-left: 225px;
+    margin-top: 10px;
 }
 
 #gopchang, #samgyupsal, #chadolbaegi, #bulgogi {
