@@ -78,7 +78,7 @@ export function initialLoad() {
 
     //Container elements
     header.restaurantName.textContent = 'Gatji Meokja!'
-    container.description.textContent = 'Gatji Meokja means lets eat together!'
+    container.description.textContent = "Gatji Meokja means 'lets eat together!'"
     container.welcome.textContent = 'Come enjoy some authentic Korean Cuisine with us!'
     container.comeSoon.textContent = 'We hope to see you soon!'
 

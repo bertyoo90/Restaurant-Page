@@ -5,7 +5,6 @@ import { contactPage } from './contact.js'
 // initialLoad()
 
 const homeContent = initialLoad()
-console.log(homeContent.container)
 
 const pageContent = {
     home: document.querySelector('#home'),
@@ -13,16 +12,11 @@ const pageContent = {
     contact: document.querySelector('#contact')
 }
 let container = document.querySelector('#container')
+pageContent.home.classList.add('button-click')
 
-
-
-function removeChildren() {
+let removeChildren = () => {
     let parent = document.querySelector('#container')
     let child = document.querySelector('#container-wrapper')
-    // while (child) {
-    // parent.removeChild(child)
-    // child = parent.lastElementChild
-    // }
     parent.removeChild(child)
 }
 
@@ -30,17 +24,26 @@ function removeChildren() {
 pageContent.home.addEventListener('click', function(){
     removeChildren()
     container.append(homeContent.container.containerWrapper)
+    pageContent.home.classList.add('button-click')
+    pageContent.menu.classList.remove('button-click')
+    pageContent.contact.classList.remove('button-click')
 
 })
 
 pageContent.menu.addEventListener('click', function() {
     removeChildren()
     menuPage()
+    pageContent.menu.classList.add('button-click')
+    pageContent.home.classList.remove('button-click')
+    pageContent.contact.classList.remove('button-click')
 })
 
 pageContent.contact.addEventListener('click', function(){
     removeChildren()
     contactPage()
+    pageContent.contact.classList.add('button-click')
+    pageContent.home.classList.remove('button-click')
+    pageContent.menu.classList.remove('button-click')
 })
 
 

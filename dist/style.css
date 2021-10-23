@@ -7,7 +7,8 @@ body {
 }
 
 header {
-    top: 0;
+    position: sticky;
+    top: 0;    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,8 +18,48 @@ header {
     color: #fff;
 }
 
+#english-title {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 40px;
+}
+
+#container-wrapper {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#author {
+    font-family: 'Montserrat', sans-serif;
+}
+
 nav {
     display: flex;
+}
+
+button {
+    display:inline-block;
+    background-color: rgba(47, 42, 45, 0.9);
+    padding:0.35em 1.2em;
+    border:0.1em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    text-align:center;
+    transition: all 0.2s;
+}
+
+
+button:hover {
+    color:#000000;
+    background-color:#FFFFFF;
+}
+
+.button-click {
+    color:#000000;
+    background-color:#FFFFFF;
 }
 
 #home, #menu, #contact {
@@ -71,9 +112,6 @@ nav {
     margin-top: 10px;
 }
 
-/* #address {
-    margin: 10px 0 10px 0; */
-/* } */
 
 #address, #location {
     margin-top: 50px;
@@ -85,10 +123,7 @@ nav {
     margin-top: 10px;
 }
 
-#gopchang, #samgyupsal, #chadolbaegi, #bulgogi {
-    color: green;
-    margin-top: 15px;
-}
+
 
 #chadolbaegi, #bulgogi {
     margin-top: 50px;
@@ -97,7 +132,14 @@ nav {
 
 #g-des, #s-des, #c-des, #b-des {
     color: white;
+    text-decoration: none;
     margin-top: 5px;
+}
+
+#gopchang, #samgyupsal, #chadolbaegi, #bulgogi {
+    color: #fff;
+    font-weight: 20px;
+    margin-top: 15px;
 }
 
 #container, #header {
@@ -121,6 +163,8 @@ nav {
 }
 
 footer {
+    bottom: 0;
+    position: sticky;
     margin-top: 120px;
     background:rgba(47, 42, 45, 0.9); 
     height: 30px;

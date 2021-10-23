@@ -55,7 +55,7 @@ export function menuPage() {
     itemDescriptions.gopDescription.textContent = 'Small beef or pork intestine'
     itemDescriptions.samDescription.textContent = 'Thick cut pieces of pork belly'
     itemDescriptions.chadolDescription.textContent = 'Thinly sliced pieces of beef brisket'
-    itemDescriptions.bulDescription.textContent = 'Marinated slices of beef or pork cooked on a hot griddle'
+    itemDescriptions.bulDescription.textContent = 'Marinated slices of beef'
 
 
     // Placing pictures underneath the description
